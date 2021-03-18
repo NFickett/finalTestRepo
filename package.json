@@ -4,7 +4,7 @@
   "description": "# Team: Mikala, Nathan, Michael, Thomas",
   "main": "postcss.config.js",
   "scripts": {
-    "start": "app.js",
+    "start": "node app.js",
     "build-css": "tailwindcss build src/styles.css -o public/styles.css"
   },
   "repository": {
