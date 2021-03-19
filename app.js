@@ -1,3 +1,4 @@
+
 var path = require('path')
 const express = require("express");
 const mongoose = require("mongoose");
@@ -5,6 +6,7 @@ const cookieParser = require("cookie-parser");
 //router
 const authRoutes = require("./routes/authRoutes");
 const app = express();
+var port = process.env.PORT ||3000;
 
 //midleware
 app.use(express.static('public'));
@@ -24,7 +26,7 @@ const dbURI =
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
-  .then((result) => app.listen(3000))
+  .then((result) => app.listen(port))
   .catch((err) => console.log(err));
 
 
