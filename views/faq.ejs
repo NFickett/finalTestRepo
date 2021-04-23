@@ -1,72 +1,54 @@
 <!-- from: https://www.w3schools.com/howto/howto_js_accordion.asp-->
 
-<!DOCTYPE html>
-<html>
+<%- include('partials/header'); -%>
 
-        <head>
+<h1>FAQ Page</h1>
+<link href="faq.css" rel="stylesheet">
+<button class="accordion"> What is Beakon? </button>
 
-            <title>FAQ Page</title>
-            <link href="faq.css" rel="stylesheet">
+<div class = "panel">
 
-        </head>
+        <p> 
 
-    <body>
+                Beakon is a web app intended to be used by both employers and employees. 
+                It acts as a platform to help track COVID-19 cases within 
+                a company, and help keep everyone in a given company informed.
 
-        
-        <h1>FAQ Page</h1>
+        </p>
+</div>
 
-        <button class="accordion"> What is Beakon? </button>
+<button class="accordion"> What should I do if 
+    I have been exposed to COVID-19, or 
+    possibly been exposed to COVID-19?</button>
 
-        <div class = "panel">
+<div class = "panel">
 
-                <p> 
+        <p> 
 
-                        Beakon is a web app intended to be used by both employers and employees. 
-                        It acts as a platform to help track COVID-19 cases within 
-                        a company, and help keep everyone in a given company informed.
+                According to the CDC, a quarantine 
+                is recommended for "People who 
+                have been in close contact with 
+                someone who has COVID-19—excluding 
+                people who have had COVID-19 within 
+                the past 3 months." Also, talking to a 
+                medical professional is recommended.
+        </p>
+</div>
 
-                </p>
-        </div>
+<button class="accordion"> If I have to quarantine, for how long? and when is it safe to return to work?
+</button>
 
-        <button class="accordion"> What should I do if 
-            I have been exposed to COVID-19, or 
-            possibly been exposed to COVID-19?</button>
+<div class = "panel">
 
-        <div class = "panel">
+        <p> 
 
-                <p> 
-
-                        According to the CDC, a quarantine 
-                        is recommended for "People who 
-                        have been in close contact with 
-                        someone who has COVID-19—excluding 
-                        people who have had COVID-19 within 
-                        the past 3 months." Also, talking to a 
-                        medical professional is recommended.
-                </p>
-        </div>
-
-        <button class="accordion"> If I have to quarantine, for how long? and when is it safe to return to work?
-        </button>
-
-        <div class = "panel">
-
-                <p> 
-
-                        According to the CDC, a 14 
-                        day quarantine is recommended
-                </p>
-        </div>
+                According to the CDC, a 14 
+                day quarantine is recommended
+        </p>
+</div>
 
 
-        <script src = "faq.js"></script>
+<script src = "faq.js"></script>
 
 
-
-
-    </body>
-
-
-
-
-</html>
+<%- include('partials/footer'); -%>

@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const {requireAuth, checkUser} = require ('./middleware/authMiddleware')
+
 //router
 const authRoutes = require("./routes/authRoutes");
 const app = express();
@@ -33,9 +34,9 @@ app.set('view engine','ejs');
 
 app.listen(port)
 //routes
-app.get('*', checkUser);
+app.get('*',checkUser);
 app.get("/", (req, res) => res.render("index"));
 app.get("/test", (req, res) => res.render("test"));
 app.get('/faq',(req,res) => res.render("faq"))
-app.get('/announcements',(req,res) => res.render("announcements"))
+app.get('/announcements', requireAuth ,(req,res) => res.render("announcements"))
 app.use(authRoutes);
